@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento vertical</title>
+    <style>
+        #conteiner {
+            position: relative; /* por padrão já é relativo */
+            height: 500px;
+            padding: 10px;
+            background-color: purple;
+        }
+        #conteudo {
+            position: absolute;
+            height: 200px;
+            width: 400px;
+            background-color: yellow;
+
+            left: 50%; /* o posicionamento usa o canto superior da imagem como referencia, por isso usar transform translate */
+            top: 50%;    /* precisa ter position absolute pra usar left e top */
+
+            transform: translate(-50%, -50%); /*valor horizontal,  valor vertical, usar em porcentagem fica mais fácil */
+        }
+    </style>
+</head>
+<body>
+    <section id="conteiner">
+        <article id="conteudo">
+
+        </article>
+    </section>
+    <!-- quando for centralizar verticalmente precisa ter conteiner e conteúdo -->
+</body>
+</html>
